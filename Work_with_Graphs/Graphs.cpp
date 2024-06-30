@@ -183,7 +183,7 @@ int main() {
 	int value = 0;
 	int numberOfRandomElement = 0;
 
-	char choice = ' ';
+	int choice = 0;
 
 	std::cout << WHITE_TEXT << "Enter a number 1 - 10: " << '\n' << RESET_TEXT;
 	std::cout << PURPLE_TEXT << "[1]" << RESET_TEXT << WHITE_TEXT << " Random Tree completion" << '\n' << RESET_TEXT;
@@ -203,7 +203,7 @@ int main() {
 	std::string cont;
 	do {
 		switch (choice) {
-		case '1': {
+		case 1: {
 			std::cout << WHITE_TEXT "The number of Random elements: " << RESET_TEXT;
 			std::cin >> numberOfRandomElement;
 
@@ -232,7 +232,7 @@ int main() {
 
 			break;
 		}
-		case '2': {
+		case 2: {
 			std::string inputElement;
 			std::getline(std::cin, inputElement);
 			bool flag = true;
@@ -275,7 +275,7 @@ int main() {
 
 			break;
 		}
-		case '3': {
+		case 3: {
 			std::cout << WHITE_TEXT << "DFS traversal: " << RESET_TEXT;
 			DFS(Tree);
 
@@ -292,7 +292,7 @@ int main() {
 
 			break;
 		}
-		case '4': {
+		case 4: {
 			std::cout << WHITE_TEXT << "BFS traversal: " << RESET_TEXT;
 			BFS(Tree);
 
@@ -309,7 +309,7 @@ int main() {
 
 			break;
 		}
-		case '5': {
+		case 5: {
 			std::cout << WHITE_TEXT << "Tree: " << RESET_TEXT;
 			directOrder(Tree);
 
@@ -326,7 +326,7 @@ int main() {
 
 			break;
 		}
-		case '6': {
+		case 6: {
 			std::cout << WHITE_TEXT << "Tree: " << RESET_TEXT;
 			symmetricalOrder(Tree);
 
@@ -343,7 +343,7 @@ int main() {
 
 			break;
 		}
-		case '7': {
+		case 7: {
 			std::cout << WHITE_TEXT << "Tree: " << RESET_TEXT;
 			reverseOrder(Tree);
 			
@@ -360,7 +360,7 @@ int main() {
 
 			break;
 		}
-		case '8': {
+		case 8: {
 			std::cout << WHITE_TEXT << "Enter value for remove: " << RESET_TEXT;
 			std::cin >> value;
 			remove(Tree, value);
@@ -381,7 +381,7 @@ int main() {
 
 			break;
 		}
-		case '9': {
+		case 9: {
 			std::cout << WHITE_TEXT << "\nYour Tree: \n '--' it's left, '__' it's right \n" << RESET_TEXT;
 			printTree(Tree); 
 
@@ -398,7 +398,7 @@ int main() {
 
 			break;
 		}
-		case '10': {
+		case 10: {
 			deleteTree(Tree);
 			std::cout << WHITE_TEXT << "Tree deleted\n" << RESET_TEXT;
 
